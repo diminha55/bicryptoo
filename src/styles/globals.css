@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://use.typekit.net/mpa1wkh.css");
+html,
+body {
+  font-family: "Inter", "acumin-pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
+@import "./addons/loader.css";
+@import "./addons/apexcharts.css";
+@import "./addons/tooltip.css";
+
+@import "./utilities.css";
+@import "./datatable.css";
+@import "./resizer.css";
+@import "./card.css";
+@import "./animations.css";
+@import "./text.css";
+
+@layer base {
+  .order-input::-webkit-inner-spin-button,
+  .order-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .component-selected {
+    @apply relative;
+  }
+  .component-selected::after {
+    content: " ";
+    @apply border-info-500 border border-dashed w-full h-full absolute left-0 top-0 pointer-events-none block;
+  }
+}
+
+.hidden-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.ease-animation {
+  transition-timing-function: ease-in;
+  transition: 0.2s cubic-bezier(0.2, 1, 0.2, 1);
+}
+.no-transition * {
+  transition-property: none !important;
+  transition-duration: 0 !important;
+}

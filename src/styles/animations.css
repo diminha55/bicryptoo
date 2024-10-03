@@ -1,0 +1,53 @@
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotating {
+    animation: rotate 4s linear infinite;
+  }
+  
+  .hover-animate {
+    animation: moveToLeft 2s forwards ease-in-out infinite;
+  }
+  
+  @keyframes moveToLeft {
+    0% {
+      transform: translateX(0);
+    }
+    10% {
+      transform: translateX(-2.5px);
+    }
+    20% {
+      transform: translateX(-5px);
+    }
+    30% {
+      transform: translateX(-2.5px);
+    }
+    40% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(2.5px);
+    }
+    60% {
+      transform: translateX(5px);
+    }
+    70% {
+      transform: translateX(2.5px);
+    }
+    80% {
+      transform: translateX(0);
+    }
+    90% {
+      transform: translateX(-2.5px);
+    }
+    100% {
+      transform: translateX(-5px);
+    }
+  }
+  
