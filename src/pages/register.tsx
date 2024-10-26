@@ -307,7 +307,7 @@ function RegisterComponent() {
                         <Input
                           label={("Referral Code")}
                           color="contrast"
-                          placeholder={t("Referral code")}
+                          placeholder={("Referral code")}
                           value={referral}
                           onChange={(e) => setReferral(e.target.value)}
                           readOnly
