@@ -9,7 +9,6 @@ import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import $fetch from "@/utils/api";
 import { useDashboardStore } from "@/stores/dashboard";
-import { useTranslation } from "next-i18next";
 import { useGoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import Heading from "@/components/elements/base/heading/Heading";
 import Paragraph from "@/components/elements/base/paragraph/Paragraph";
@@ -56,7 +55,6 @@ function PasswordValidation({ password }: { password: string }) {
 }
 
 function RegisterComponent() {
-  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
