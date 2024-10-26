@@ -139,21 +139,21 @@ function RegisterComponent() {
   };
 
   return (
-    <Layout title={t("Register")} color="muted">
+    <Layout title={("Register")} color="muted">
       <main className="relative min-h-screen">
         <div className="flex h-screen flex-col items-center bg-white dark:bg-muted-900 md:flex-row">
           <div className="hidden h-screen w-full bg-indigo-600 md:w-1/2 lg:flex xl:w-2/3 from-primary-900 to-primary-500 i group relative items-center justify-around overflow-hidden bg-gradient-to-tr md:flex">
             <div className="mx-auto max-w-xs text-center">
               <Heading as="h2" weight="medium" className="text-white">
-                {t("Have an Account")}?
+                {("Have an Account")}?
               </Heading>
               <Paragraph size="sm" className="text-muted-200 mb-3">
-                {t(
+                {(
                   "No need to waste time on this page, let's take you back to your account"
                 )}
               </Paragraph>
               <ButtonLink href="/login" shape="curved" className="w-full">
-                {t("Login to Account")}
+                {("Login to Account")}
               </ButtonLink>
             </div>
             <div className="bg-muted-200/20 absolute -start-6 -top-6 h-14 w-0 origin-top-left rotate-45 rounded-full transition-all delay-[25ms] duration-300 group-hover:w-72"></div>
@@ -181,8 +181,8 @@ function RegisterComponent() {
             <div className="mx-auto w-full max-w-sm px-4">
               <h1 className="mt-12 mb-6 font-sans text-2xl font-light leading-9 text-muted-800 dark:text-muted-100">
                 {isVerificationStep
-                  ? t("Verify your email")
-                  : t("Create a new account")}
+                  ? ("Verify your email")
+                  : ("Create a new account")}
               </h1>
 
               {isVerificationStep ? (
@@ -197,9 +197,9 @@ function RegisterComponent() {
                   <div className="flex flex-col gap-4">
                     <Input
                       icon="lucide:lock"
-                      label={t("Verification Code")}
+                      label={("Verification Code")}
                       color="contrast"
-                      placeholder={t("Enter verification code")}
+                      placeholder={("Enter verification code")}
                       value={verificationCode}
                       onChange={(e) => setVerificationCode(e.target.value)}
                     />
@@ -214,7 +214,7 @@ function RegisterComponent() {
                       loading={loading}
                       disabled={loading}
                     >
-                      {t("Verify Email")}
+                      {("Verify Email")}
                     </Button>
                   </div>
                 </form>
@@ -235,7 +235,7 @@ function RegisterComponent() {
                             icon="logos:google-icon"
                             className="me-1 h-4 w-4"
                           />
-                          <span>{t("Sign up with Google")}</span>
+                          <span>{("Sign up with Google")}</span>
                         </Button>
                       </div>
 
@@ -243,7 +243,7 @@ function RegisterComponent() {
                         <hr className="my-8 w-full border-muted-300 dark:border-muted-800" />
                         <div className="absolute inset-x-0 -top-3 mx-auto text-center">
                           <span className="bg-white px-4 py-1 font-sans text-sm text-muted-400 dark:bg-muted-900">
-                            {t("or signup with email")}
+                            {("or signup with email")}
                           </span>
                         </div>
                       </div>
@@ -255,17 +255,17 @@ function RegisterComponent() {
                       <div className="flex gap-4">
                         <Input
                           autoComplete="given-name"
-                          label={t("First Name")}
+                          label={("First Name")}
                           color="contrast"
-                          placeholder={t("John")}
+                          placeholder={("John")}
                           value={firstName}
                           onChange={(e) => setFirstName(e.target.value)}
                         />
                         <Input
                           autoComplete="family-name"
-                          label={t("Last Name")}
+                          label={("Last Name")}
                           color="contrast"
-                          placeholder={t("Doe")}
+                          placeholder={("Doe")}
                           value={lastName}
                           onChange={(e) => setLastName(e.target.value)}
                         />
@@ -273,9 +273,9 @@ function RegisterComponent() {
                       <Input
                         type="email"
                         icon="lucide:mail"
-                        label={t("Email address")}
+                        label={("Email address")}
                         color="contrast"
-                        placeholder={t("ex: johndoe@gmail.com")}
+                        placeholder={("ex: johndoe@gmail.com")}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                       />
@@ -283,7 +283,7 @@ function RegisterComponent() {
                         <Input
                           type={showPassword ? "text" : "password"} // Conditionally change the input type
                           icon="lucide:lock"
-                          label={t("Password")}
+                          label={("Password")}
                           color="contrast"
                           placeholder=""
                           value={password}
@@ -305,7 +305,7 @@ function RegisterComponent() {
                       <PasswordValidation password={password} />
                       {referral && (
                         <Input
-                          label={t("Referral Code")}
+                          label={("Referral Code")}
                           color="contrast"
                           placeholder={t("Referral code")}
                           value={referral}
@@ -324,7 +324,7 @@ function RegisterComponent() {
                         loading={loading}
                         disabled={loading || !isPasswordValid} // Disable if loading or password is invalid
                       >
-                        {t("Sign up")}
+                        {("Sign up")}
                       </Button>
                     </div>
                   </form>
@@ -332,12 +332,12 @@ function RegisterComponent() {
                   <hr className="my-8 w-full border-muted-300 dark:border-muted-800" />
 
                   <p className="mt-8 space-x-2 font-sans text-sm leading-5 text-muted-600 dark:text-muted-400">
-                    <span>{t("Already have an account?")}</span>
+                    <span>{("Already have an account?")}</span>
                     <Link
                       href="/login"
                       className="font-medium text-primary-600 underline-offset-4 transition duration-150 ease-in-out hover:text-primary-500 hover:underline focus:underline focus:outline-none"
                     >
-                      {t("Log in")}
+                      {("Log in")}
                     </Link>
                   </p>
                 </>
